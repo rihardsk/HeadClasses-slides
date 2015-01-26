@@ -30,8 +30,7 @@
 *.vrb
 *.xdy
 *.tdo
-Tex/abstract.pdf
-Tex/*.bcf
-Tex/HeadClasses.pdf
-Tex/*.run.xml
-Tex/*.tex.orig
+*.bcf
+slides.pdf
+*.run.xml
+*.tex.orig
