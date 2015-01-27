@@ -308,11 +308,33 @@ We will show how a $u_ptm$ denoted by $\mathcal{T}$ that recognizes $L$ can be t
 %------------------------------------------------
 \begin{frame}
 \frametitle{Proof -- used constructions}
-
+\begin{lemma} \label{reizinajums}
+For all languages $L \in \widehat{U_pTM}$ and all $u, v \geq 1, u, v \in \mathbb{N}$:
+$
+	f_u(L) \in \widehat{2\mathit{U_pFA}(v)} \Rightarrow L \in \widehat{2\mathit{U_pFA}(u \cdot v)}.
+$
+\end{lemma}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
 \frametitle{Definition}
+\begin{lemma} \label{plus1}
+For every language $L \in \widehat{U_pTM}$ and every $u > v > 1, u, v \in \mathbb{N}$:
+\[
+	f_{u+1}(L) \in \widehat{2\mathit{U_pFA}(v)} \Rightarrow f_u(L) \in \widehat{2\mathit{U_pFA}(v + 1)}.
+\]
+\end{lemma}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Proof -- used constructions}
+\begin{theorem}
+For all $k \geq 2 \in \mathbb{N}$:
+\[
+	\widehat{2\mathit{U_pFA}(k)} \subsetneqq \widehat{2\mathit{U_pFA}(k + 1)}.
+\]
+\end{theorem}
+We prove from the contrary by showing that if there exists such $h \geq 2$ that $\widehat{2\mathit{U_pFA}(h)} = \widehat{2\mathit{U_pFA}(h + 1)}$, it implies $\widehat{2\mathit{U_pFA}(h \cdot (h + 1))} = \widehat{U_pTM}$, which contradicts $\widehat{2\mathit{U_pFA}(k)} \subsetneqq \widehat{U_pTM}$.
 
 \end{frame}
 %------------------------------------------------
