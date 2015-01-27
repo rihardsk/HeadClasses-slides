@@ -170,9 +170,44 @@ proved that any non-trivial absolute value on the rational numbers $\mathbb{Q}$ 
 
 %------------------------------------------------
 \begin{frame}
-\frametitle{Motivation for our paper}
+\frametitle{Definitions -- $p$-norm}
+For every non-zero rational number $\alpha$ there exists a unique prime factorization $\alpha = \pm 2^{\alpha_2}3^{\alpha_3}5^{\alpha_5}7^{\alpha_7} \cdots$ where $\alpha_i \in \mathbb{Z}$.
+%\begin{definition}
+
+The $p$-adic absolute value (also called the \textbf{$p$-norm}) of a rational number $\alpha = \pm 2^{\alpha_2}3^{\alpha_3}5^{\alpha_5}7^{\alpha_7} \cdots$ is 
+\[
+\|\alpha\|_p = \begin{cases}
+p^{-\alpha_p}, &\textrm{if } \alpha \neq 0 \\
+0, &\textrm{if } \alpha = 0.
+\end{cases}
+\]
+%\end{definition}
 \end{frame}
 
+%------------------------------------------------
+\begin{frame}
+\frametitle{Definitions -- ultrametric automata}
+A finite one-way $p$-ultrametric one-head automaton  ($1\mathit{u_pfa}$ or $1\mathit{u_pfa}(1)$) is a sextuple
+$\langle S, \Sigma, s_0, \delta, Q_A, Q_R \rangle$ where
+\begin{itemize}
+  \item $S$ is a finite set---the set of states,
+  \item $\Sigma$ is a finite set ($\$ \notin \Sigma$)---input alphabet,
+  \item $s_0:S \rightarrow \mathbb{Q}_p$ is the initial amplitude distribution,
+  \item $\delta: \left( \Sigma \cup \left\{ \$ \right\} \right) \times S \times S \rightarrow \mathbb{Q}_p$ is the transition function,
+  \item $Q_A, Q_R \subseteq S$ are the sets of accepting and rejecting states, respectively.
+\end{itemize}
+
+The amplitude distribution after processing the $i$-th symbol is denoted as $s_i$, with
+$s_i(y) = \sum_{x \in S}{s_{i-1}(x) \cdot \delta \left( w_i, x, y \right) }$ for every $y \in S$.
+
+If $\sum_{x \in Q_A}{\left\| s_{n+1}(x) \right\|_p} > \sum_{x \in Q_R}{\left\| s_{n+1}(x) \right\|_p}$, then the word $w$ is said to be accepted, otherwise---rejected.
+
+\end{frame}
+%-----------------------------------------
+\begin{frame}
+\frametitle{Definitions -- ultrametric automata}
+
+\end{frame}
 %------------------------------------------------
 
 \begin{frame}
