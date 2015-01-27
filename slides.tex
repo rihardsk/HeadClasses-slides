@@ -133,7 +133,7 @@ University of Latvia Faculty of Computing \\ % Your institution for the title pa
 \begin{frame}
 \frametitle{Ultrametric finite automata and ultrametric Turing machines}
 \begin{itemize}
-	\item Introduced by \cite{Freivalds2012}
+	\item Introduced by Freivalds in 2012.
 	\item "[..] using $p$-adic numbers is not merely one of many possibilities to generalize the definition of deterministic algorithms but rather the only remaining possibility not yet explored."
 \end{itemize}
 \end{frame}
@@ -144,7 +144,7 @@ University of Latvia Faculty of Computing \\ % Your institution for the title pa
 \begin{itemize}
 \item Pascal and Fermat believed that every event of indeterminism can be described by a real number between 0 and 1 called probability.
 \item Quantum physics introduced a description in terms of complex numbers called amplitude of probabilities and later in terms of probabilistic combinations of amplitudes most conveniently described by density matrices.
-\item String theory \cite{V.S.Vladimirov1995}, chemistry \cite{Kozyrev2006} and molecular biology \cite{Dragovich2009} have introduced p-adic numbers to describe measures of indeterminism.
+\item String theory, chemistry and molecular biology have introduced p-adic numbers to describe measures of indeterminism.
 \end{itemize}
 \end{frame}
 
@@ -167,8 +167,8 @@ proved that any non-trivial absolute value on the rational numbers $\mathbb{Q}$ 
 \begin{frame}
 \frametitle{Motivation for our paper}
 \begin{itemize}
-	\item \citep{KasparsBalodis2013} showed that regularized ultrametric automata recognize exactly the set of regular languages.
-	\item \citep{Holzer2009, Yao1978, Monien1980, Macarie1995} show results for deterministic, nondeterministic and probabilistic multihead finite automata in the two-way and one-way cases.
+	\item Balodis et al. (2013) showed that regularized ultrametric automata recognize exactly the set of regular languages.
+	\item Holzer (2009), Yao (1978), Monien (1980), Macarie (1995) show results for deterministic, nondeterministic and probabilistic multihead finite automata in the two-way and one-way cases.
 \end{itemize}
 \end{frame}
 
@@ -269,6 +269,14 @@ L_k = \left\{ w_1 1 w_2 1 \ldots 1 w_{2n} \middle|
 
 \end{frame}
 %------------------------------------------------
+\begin{frame}
+\frametitle{Two-way multi-head automata}
+\begin{itemize}
+	\item Monien (1980) and Macarie (1995) show that deterministic and probabilistic two-way finite automata with $k$ heads are weaker than those with $k+1$ heads.
+	\item We show that the same results hold for Ultrametric multi-head finite automata.
+\end{itemize}
+\end{frame}
+%------------------------------------------------
 
 \begin{frame}
 \frametitle{Results -- two-way multi-head automata}
@@ -282,17 +290,18 @@ For every natural number $k$ and prime $p$:
 	\widehat{2\mathit{U_pFA}(k)} \subsetneqq \widehat{U_pTM}.
 \]
 \end{theorem}
-We will construct a special $p$-ultrametric Turing machine with 2 tapes and $log$-space space complexity called $\mathcal{T}$. We will show that its recognized language cannot be recognized by a $p$-ultrametric automata with $k$ heads for any $k$.
+We construct a special $p$-ultrametric Turing machine with 2 tapes and $log$-space space complexity called $\mathcal{T}$. We show that its recognized language cannot be recognized by a $p$-ultrametric automata with $k$ heads for any $k$.
 
 \end{frame}
 %------------------------------------------------
 
 \begin{frame}
 \frametitle{Proof -- used constructions}
-Similarly, as in \citep{Macarie1995} and \citep{Monien1980}, in the following proofs we will use the function
+We use the function
 $
 	f_k : \left\{ 1^{2^n} | n \in \mathbb{N} \right\} \rightarrow \left\{ 1^{2^n} | n \in \mathbb{N} \right\} \textrm{, where } f_k( 1^{2^n}) = 1^{2^{k \cdot n}}
 $.
+Which is the same as one used by Macarie (1995) and Monien (1980).
 
 When $f_k$ is applied to a language, we refer to the following function: $f_k(L) = \left\{ f_k(x) \middle| x\in L \right\}$.
 
@@ -302,7 +311,7 @@ $
 	f_u(L) \in \widehat{2\mathit{U_pFA}(3)}.
 $
 \end{lemma}
-We will show how a $u_ptm$ denoted by $\mathcal{T}$ that recognizes $L$ can be transformed into a $u_ptm$ called $\mathcal{T'}$, which can then be replaced by a $p$-ultrametric $3$ register machine. From this, it easily follows that there exists a $2\mathit{u_pfa}(3)$ that recognizes a ``stretched"  variant of $L$, where stretching is done by $f_u$.
+We show how a $u_ptm$ denoted by $\mathcal{T}$ that recognizes $L$ can be transformed into a $u_ptm$ called $\mathcal{T'}$, which can then be replaced by a $p$-ultrametric $3$ register machine. From this, it easily follows that there exists a $2\mathit{u_pfa}(3)$ that recognizes a ``stretched"  variant of $L$, where stretching is done by $f_u$.
 
 \end{frame}
 %------------------------------------------------
@@ -339,137 +348,10 @@ We prove from the contrary by showing that if there exists such $h \geq 2$ that 
 \end{frame}
 %------------------------------------------------
 
-
 \begin{frame}
-\frametitle{Bullet Points}
-\begin{itemize}
-\item Lorem ipsum dolor sit amet, consectetur adipiscing elit
-\item Aliquam blandit faucibus nisi, sit amet dapibus enim tempus eu
-\item Nulla commodo, erat quis gravida posuere, elit lacus lobortis est, quis porttitor odio mauris at libero
-\item Nam cursus est eget velit posuere pellentesque
-\item Vestibulum faucibus velit a augue condimentum quis convallis nulla gravida
-\end{itemize}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Blocks of Highlighted Text}
-\begin{block}{Block 1}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-\end{block}
-
-\begin{block}{Block 2}
-Pellentesque sed tellus purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum quis magna at risus dictum tempor eu vitae velit.
-\end{block}
-
-\begin{block}{Block 3}
-Suspendisse tincidunt sagittis gravida. Curabitur condimentum, enim sed venenatis rutrum, ipsum neque consectetur orci, sed blandit justo nisi ac lacus.
-\end{block}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Multiple Columns}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-\column{.45\textwidth} % Left column and width
-\textbf{Heading}
-\begin{enumerate}
-\item Statement
-\item Explanation
-\item Example
-\end{enumerate}
-
-\column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
-\end{columns}
-\end{frame}
-
-%------------------------------------------------
-\section{Second Section}
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Table}
-\begin{table}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Verbatim}
-\begin{example}[Theorem Slide Code]
-\begin{verbatim}
-\begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}\end{verbatim}
-\end{example}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Figure}
-Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
-%\begin{figure}
-%\includegraphics[width=0.8\linewidth]{test}
-%\end{figure}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Citation}
-An example of the \verb|\cite| command to cite within the presentation:\\~
-
-This statement requires citation \cite{p1}.
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{References}
-\footnotesize{
-\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
-\bibitem[Smith, 2012]{p1} John Smith (2012)
-\newblock Title of the publication
-\newblock \emph{Journal Name} 12(3), 45 -- 678.
-\end{thebibliography}
-}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-\Huge{\centerline{The End}}
+\Huge{\centerline{Questions?}}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
 
-\end{document} 
+\end{document}
