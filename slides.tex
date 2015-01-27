@@ -205,7 +205,19 @@ If $\sum_{x \in Q_A}{\left\| s_{n+1}(x) \right\|_p} > \sum_{x \in Q_R}{\left\| s
 \end{frame}
 %-----------------------------------------
 \begin{frame}
-\frametitle{Definitions -- ultrametric automata}
+\frametitle{Results -- $1\mathit{u_pfa}(1)$ vs $1\mathit{nfa}(k)$}
+Let $n={k\choose 2}+1$.
+\[
+L_k = \left\{ w_1 1 w_2 1 \ldots 1 w_{2n} \middle|
+		w_i \in \left\{ 0^m | m \geq 1 \right\} \wedge
+		w_i = w_{2n-i+1} 
+		 \right\}.
+\]
+
+\begin{enumerate}
+	\item For every prime $p$ there exists a $1\mathit{u_pfa}(1)$ that recognizes $L_k$,
+	\item $L_k$ cannot be recognized by any $1\mathit{nfa}(k)$.
+\end{enumerate}
 
 \end{frame}
 %------------------------------------------------
