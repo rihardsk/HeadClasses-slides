@@ -218,11 +218,12 @@ L_k = \left\{ w_1 1 w_2 1 \ldots 1 w_{2n} \middle|
 		w_i = w_{2n-i+1} 
 		 \right\}.
 \]
-
+\begin{theorem}
 \begin{enumerate}
 	\item For every prime $p$ there exists a $1\mathit{u_pfa}(1)$ that recognizes $L_k$,
 	\item $L_k$ cannot be recognized by any $1\mathit{nfa}(k)$.
 \end{enumerate}
+\end{theorem}
 %-----------------------------------------------
 \end{frame}
 \begin{frame}
@@ -268,6 +269,54 @@ L_k = \left\{ w_1 1 w_2 1 \ldots 1 w_{2n} \middle|
 
 \end{frame}
 %------------------------------------------------
+
+\begin{frame}
+\frametitle{Results -- two-way multi-head automata}
+By $\widehat{C}$, we denote the subset of a language class $C$ containing only the words in the form $1^{2^n}, n \in \mathbb{N}$, more precisely  
+$\widehat{C} = \left\{ L \in C | \forall x \in L \; \exists n \in \mathbb{N} : x = 1^{2^n} \right\}$
+% $\widehat{C} = \left\{ h | h \in C \wedge \exists n \in \mathbb{N} : h = 1^{2^n} \right\}$\\
+
+\begin{theorem} \label{atdalisana}
+For every natural number $k$ and prime $p$:
+\[
+	\widehat{2\mathit{U_pFA}(k)} \subsetneqq \widehat{U_pTM}.
+\]
+\end{theorem}
+We will construct a special $p$-ultrametric Turing machine with 2 tapes and $log$-space space complexity called $\mathcal{T}$. We will show that its recognized language cannot be recognized by a $p$-ultrametric automata with $k$ heads for any $k$.
+
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Proof -- used constructions}
+Similarly, as in \citep{Macarie1995} and \citep{Monien1980}, in the following proofs we will use the function
+$
+	f_k : \left\{ 1^{2^n} | n \in \mathbb{N} \right\} \rightarrow \left\{ 1^{2^n} | n \in \mathbb{N} \right\} \textrm{, where } f_k( 1^{2^n}) = 1^{2^{k \cdot n}}
+$.
+
+When $f_k$ is applied to a language, we refer to the following function: $f_k(L) = \left\{ f_k(x) \middle| x\in L \right\}$.
+
+\begin{lemma} \label{skaititaji}
+For every language $L \in \widehat{U_pTM}$ that is recognized by a 2-tape $u_ptm$ in logarithmic space, there exists a natural number $u$ such that:
+$
+	f_u(L) \in \widehat{2\mathit{U_pFA}(3)}.
+$
+\end{lemma}
+We will show how a $u_ptm$ denoted by $\mathcal{T}$ that recognizes $L$ can be transformed into a $u_ptm$ called $\mathcal{T'}$, which can then be replaced by a $p$-ultrametric $3$ register machine. From this, it easily follows that there exists a $2\mathit{u_pfa}(3)$ that recognizes a ``stretched"  variant of $L$, where stretching is done by $f_u$.
+
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Proof -- used constructions}
+
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+\frametitle{Definition}
+
+\end{frame}
+%------------------------------------------------
+
 
 \begin{frame}
 \frametitle{Bullet Points}
