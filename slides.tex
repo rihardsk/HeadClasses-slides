@@ -223,7 +223,17 @@ L_k = \left\{ w_1 1 w_2 1 \ldots 1 w_{2n} \middle|
 	\item For every prime $p$ there exists a $1\mathit{u_pfa}(1)$ that recognizes $L_k$,
 	\item $L_k$ cannot be recognized by any $1\mathit{nfa}(k)$.
 \end{enumerate}
-
+%-----------------------------------------------
+\end{frame}
+\begin{frame}
+\frametitle{Proof -- used constructions}
+\small
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{Img/1pfa.pdf}
+\caption{Automaton for recognizing $0^n10^m10^h1 \cdots 10^h10^m10^n$. Double-circled states are rejecting. Large arrows with labels in them show the amplitude distribution when the automaton starts. Small labelled arrows show transitions. A label $(a, b)$ indicates that if the automaton reads $a$, transition with amplitude $b$ should be made.}
+\label{fig:1pfa}
+\end{figure}
 \end{frame}
 %------------------------------------------------
 \begin{frame}
